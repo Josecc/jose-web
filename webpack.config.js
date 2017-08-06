@@ -9,16 +9,19 @@ const extractSass = new ExtractTextPlugin({
 const html = new HtmlWebpackPlugin({
   title: 'Jose\'s Website',
   filename: 'index.html',
-  template: 'src/index.ejs'
+  template: 'index.ejs'
 });
 
+const sourceFolder = path.resolve(__dirname, 'src');
+
 module.exports = {
-  entry: './src/app.js',
+  entry: './app.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   watch: true,
+  context: sourceFolder,
   plugins: [
     extractSass,
     html
@@ -31,11 +34,16 @@ module.exports = {
         test: /\.scss$/,
         use: extractSass.extract({
           use: [{
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              context: sourceFolder
+            }
           }, {
-            loader: 'sass-loader'
+            loader: 'sass-loader',
+            options: {
+              includePaths: [sourceFolder]
+            }
           }],
-          // use style-loader in development
           fallback: 'style-loader'
         })
       },

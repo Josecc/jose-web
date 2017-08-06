@@ -1,0 +1,12 @@
+@import 'stylesheets/variables';
+
+body {
+  background-color: $color-salmon;
+}
+
+h1 {
+  font-family: $font-marydale, sans-serif;
+  color: $color-white;
+  font-size: $font-large;
+  font-weight: 100;
+}

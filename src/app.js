@@ -5,6 +5,8 @@ import {
   Route
 } from 'react-router-dom';
 
+require('./app.scss');
+
 import Home from './components/Home';
 
 render((

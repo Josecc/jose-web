@@ -29,3 +29,4 @@ Temporary Items
 /dist
 /node_modules
 package-lock.json
+.env

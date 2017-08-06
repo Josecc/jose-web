@@ -57,10 +57,51 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name]-[hash].[ext]',
+              context: sourceFolder
+            }
+          },
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                {removeTitle: true},
+                {convertColors: {shorthex: false}},
+                {convertPathData: false}
+              ]
+            }
+          }
+        ],
+        exclude: path.resolve(__dirname, 'src/assets/inline')
+      },
+      {
+        test: /\.svg$/,
+        use: [{
+          loader: 'raw-loader'
+        }, {
+          loader: 'svgo-loader',
+          options: {
+            plugins: [
+              {removeTitle: true},
+              {convertColors: {shorthex: false}},
+              {convertPathData: false},
+              {cleanupIDs: false},
+              {mergePaths: false}
+            ]
+          }
+        }],
+        include: path.resolve(__dirname, 'src/assets/inline')
       }
     ],
   },

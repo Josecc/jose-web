@@ -9,5 +9,9 @@
 
   &-content {
     margin: 20px;
+
+    & a {
+      color: $white;
+    }
   }
 }

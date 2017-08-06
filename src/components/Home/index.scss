@@ -1,17 +1,23 @@
 @import 'stylesheets/variables';
 
 .app-Home {
-  text-align: center;
-  margin-top: 20px;
+  padding: 0 10px;
+
+  & h1 {
+    text-align: center;
+  }
 
   &-text {
+    text-align: center;
     color: $white;
     font-size: $font-paragraph-s;
-    font-family: $font-ingra;
-    font-weight: 200;
 
-    @include breakpoint(small){
+    @include breakpoint(small) {
       font-size: $font-paragraph-xs;
+    };
+
+    @include breakpoint(medium-and-below) {
+      font-weight: 200;
     };
 
     &-light {

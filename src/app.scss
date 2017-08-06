@@ -1,12 +1,22 @@
 @import 'stylesheets/variables';
 
 body {
-  background-color: $color-salmon;
+  background-color: $salmon;
 }
 
 h1 {
-  font-family: $font-marydale, sans-serif;
-  color: $color-white;
-  font-size: $font-large;
+  font-family: $font-marydale;
+  color: $white;
+  font-size: $font-heading-l;
   font-weight: 100;
+  margin: 0;
+
+  @include breakpoint(small){
+    font-size: $font-heading-s;
+  };
+
+  & a {
+    color: $white;
+    text-decoration: none;
+  }
 }

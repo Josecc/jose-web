@@ -7,7 +7,7 @@ import {
 
 require('./app.scss');
 
-import Home from './components/Home';
+import Home from 'components/Home';
 
 render((
   <Router>

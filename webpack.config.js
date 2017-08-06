@@ -21,7 +21,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   watch: true,
-  context: sourceFolder,
+  context: path.join(__dirname, 'src'),
+  resolve: {
+    extensions: ['.js'],
+    modules: ['src', 'node_modules'],
+  },
   plugins: [
     extractSass,
     html
@@ -50,7 +54,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       }
     ],
   },

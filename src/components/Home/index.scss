@@ -1,0 +1,21 @@
+@import 'stylesheets/variables';
+
+.app-Home {
+  text-align: center;
+  margin-top: 20px;
+
+  &-text {
+    color: $white;
+    font-size: $font-paragraph-s;
+    font-family: $font-ingra;
+    font-weight: 200;
+
+    @include breakpoint(small){
+      font-size: $font-paragraph-xs;
+    };
+
+    &-light {
+      font-weight: 100;
+    }
+  }
+}

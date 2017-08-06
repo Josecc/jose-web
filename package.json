@@ -1,0 +1,36 @@
+{
+  "name": "jose-web",
+  "version": "1.0.0",
+  "description": "Jose's Personal Website",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josecc/jose-web.git"
+  },
+  "author": "Jose Canahui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josecc/jose-web/issues"
+  },
+  "homepage": "https://github.com/Josecc/jose-web#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.4.0",
+    "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.4.1"
+  },
+  "dependencies": {
+    "react": "^16.0.0-beta.3",
+    "react-dom": "^16.0.0-beta.3",
+    "react-router-dom": "^4.1.2"
+  }
+}

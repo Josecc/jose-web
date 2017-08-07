@@ -7,7 +7,7 @@ const extractSass = new ExtractTextPlugin({
 });
 
 const html = new HtmlWebpackPlugin({
-  title: 'Jose\'s Website',
+  title: 'Jose Canahui',
   filename: 'index.html',
   template: 'index.ejs'
 });
@@ -20,7 +20,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  watch: true,
   context: path.join(__dirname, 'src'),
   resolve: {
     extensions: ['.js'],

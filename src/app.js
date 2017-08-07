@@ -15,3 +15,10 @@ render((
     </Route>
   </Router>
 ), document.getElementById('root'));
+
+[].forEach.call(document.querySelectorAll('img[data-src]'), img =>  {
+  img.setAttribute('src', img.getAttribute('data-src'));
+  img.onload = () => {
+    img.removeAttribute('data-src');
+  };
+});

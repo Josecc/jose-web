@@ -3,15 +3,42 @@
 .app-Footer {
   position: absolute;
   left: 0 ; right: 0; bottom: 0;
-  height: 80px;
+  height: 60px;
   background-color: $gray;
   color: $white;
 
   &-content {
     margin: 20px;
+    position: relative;
 
-    & a {
-      color: $white;
+    &-copy {
+      margin-left: auto;
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &-social {
+      max-width: 160px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      & a {
+        max-height: 20px;
+
+        & svg {
+          fill: $white;
+          width: 20px;
+          cursor: pointer;
+          transition: filter .2s linear;
+
+          &:hover{
+            filter: drop-shadow($shadow-filter);
+          }
+        }
+      }
     }
   }
 }

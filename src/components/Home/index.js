@@ -12,7 +12,7 @@ export default class Home extends Component {
     return(
       <div className="app-Home">
         <h1>Hi! I&rsquo;m Jose.</h1>
-        <h1>I code, write, and study<Desktop><span> at <a href="https://vt.edu" target="__blank" referece="noopener">Virtginia Tech</a></span></Desktop>.</h1>
+        <h1>I code, write, and study<Desktop><span> at <a href="https://vt.edu" rel="noopener" target="__blank">Virtginia Tech</a></span></Desktop>.</h1>
         <Panel/>
         <Footer/>
       </div>

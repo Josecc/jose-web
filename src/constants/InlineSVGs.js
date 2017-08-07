@@ -9,3 +9,8 @@ export const panelPlaceholders = [
   inline(require('assets/inline/panel-six-placeholder.svg')),
   inline(require('assets/inline/panel-seven-placeholder.svg'))
 ];
+
+export const github = inline(require('assets/inline/github.svg'));
+export const linkedin = inline(require('assets/inline/linkedin.svg'));
+export const medium = inline(require('assets/inline/medium.svg'));
+export const instagram = inline(require('assets/inline/instagram.svg'));

@@ -9,7 +9,7 @@ body {
   background-color: $salmon;
   min-height: calc(100vh - 80px);
   margin: 0;
-  position:relative;
+  position: relative;
   padding-bottom: 80px;
   font-family: $font-ingra;
   font-weight: 200;
@@ -30,6 +30,13 @@ h1 {
     color: $white;
     text-decoration: none;
   }
+}
+
+h2 {
+  color: $salmon;
+  text-align: center;
+  font-family: $font-ingra;
+  font-weight: 300;
 }
 
 img {

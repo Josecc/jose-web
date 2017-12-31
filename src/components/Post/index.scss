@@ -1,0 +1,48 @@
+@import 'stylesheets/variables';
+
+.app-Post {
+  width: 300px;
+  height: 180px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none !important; // too lazy to undo all browser link styles
+
+  &:active {
+    box-shadow: inset $shadow-center;
+  }
+
+  & > h2 {
+    transition: all 0.15s ease-in-out;
+    padding: 1em 0;
+    margin: 0;
+  }
+
+  &:hover > h2 {
+    background-color: $yellow;
+    color: $white;
+  }
+
+  &:hover {
+    border-bottom: solid 1px $salmon;
+  }
+
+  &:active > h2 {
+    background-color: darken($yellow, 5%);
+    color: $white;
+  }
+
+  & > hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $yellow;
+    margin: 0 0 1em;
+    padding: 0;
+  }
+
+  & > p {
+    user-select: none;
+    margin: auto 1em 1em;
+    color: $gray;
+  }
+}

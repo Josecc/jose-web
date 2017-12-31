@@ -4,16 +4,27 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import thunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+
+import reducer from './reducers';
+import {initialPosts} from 'actions/medium';
+import Home from 'components/Home';
 
 require('./app.scss');
 
-import Home from 'components/Home';
+const store = createStore(reducer, applyMiddleware(thunk));
+
+store.dispatch(initialPosts());
 
 render((
-  <Router>
-    <Route path="/" component={Home}>
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <Route path="/" component={Home}>
+      </Route>
+    </Router>
+  </Provider>
 ), document.getElementById('root'));
 
 [].forEach.call(document.querySelectorAll('img[data-src]'), img =>  {

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import PanelImage from './PanelImage';
+import Content from 'containers/Content';
 
 require('./index.scss');
 
@@ -11,9 +12,7 @@ export default class Panel extends Component {
       <div className="app-Panel">
         <PanelImage />
         <div className="app-Panel-container">
-          <div className="app-Panel-content">
-            Under Construction! :)
-          </div>
+          <Content />
         </div>
       </div>
     );

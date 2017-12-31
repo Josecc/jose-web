@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import {post} from 'constants/InlineSVGs';
 
 import {getPosts} from 'reducers/posts';
 import Post from 'components/Post';
@@ -8,6 +9,14 @@ import Post from 'components/Post';
 require('./index.scss');
 
 const Content = ({postData}) => {
+  if (postData.length == 0)
+    return (
+      <div className="app-Content">
+        <span dangerouslySetInnerHTML={post} />
+        <span dangerouslySetInnerHTML={post} />
+        <span dangerouslySetInnerHTML={post} />
+      </div>
+    );
   return (
     <div className="app-Content">
       {postData.map(post => (

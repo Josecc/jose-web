@@ -9,4 +9,10 @@
   @include breakpoint(small) {
     justify-content: center;
   }
+
+  & > span {
+    height: 155px;
+    width: 300px;
+    margin: 35px 10px 10px;
+  }
 }

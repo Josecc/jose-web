@@ -6,6 +6,8 @@
   margin: 10px;
   cursor: pointer;
   text-decoration: none !important; // too lazy to undo all browser link styles
+  border-bottom: solid 1px transparent;
+  transition: all 0.15s ease-in-out;
 
   &:active {
     box-shadow: inset $shadow-center;

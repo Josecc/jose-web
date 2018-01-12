@@ -26,7 +26,6 @@
     "css-loader": "^0.28.4",
     "eslint": "^4.4.0",
     "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-flowtype": "^2.41.0",
     "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
@@ -35,6 +34,10 @@
     "redux-devtools": "^3.4.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "stylelint": "^8.4.0",
+    "stylelint-config-sass-guidelines": "^4.0.1",
+    "stylelint-order": "^0.8.0",
+    "stylelint-scss": "^2.2.0",
     "svgo": "^0.7.2",
     "svgo-loader": "^1.2.1",
     "webpack": "^3.4.1"
@@ -49,5 +52,14 @@
     "react-router-dom": "^4.1.2",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines",
+    "plugins": "stylelint-scss",
+    "rules": {
+      "color-hex-case": "upper",
+      "selector-no-qualifying-type": null,
+      "selector-max-id": 1
+    }
   }
 }

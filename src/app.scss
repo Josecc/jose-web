@@ -1,23 +1,23 @@
 @import 'stylesheets/variables';
 
 html {
-  height: 100%;
   background-color: $gray;
+  height: 100%;
 }
 
 body {
   background-color: $salmon;
-  min-height: calc(100vh - 80px);
-  margin: 0;
-  position: relative;
-  padding-bottom: 80px;
   font-family: $font-ingra;
   font-weight: 200;
+  margin: 0;
+  min-height: calc(100vh - 80px);
+  padding-bottom: 80px;
+  position: relative;
 }
 
 h1 {
-  font-family: $font-marydale;
   color: $white;
+  font-family: $font-marydale;
   font-size: $font-heading-l;
   font-weight: 100;
   margin: 0;
@@ -26,7 +26,7 @@ h1 {
     font-size: $font-heading-s;
   };
 
-  & a {
+  a {
     color: $white;
     text-decoration: none;
   }
@@ -34,9 +34,9 @@ h1 {
 
 h2 {
   color: $salmon;
-  text-align: center;
   font-family: $font-ingra;
   font-weight: 300;
+  text-align: center;
 }
 
 img {

@@ -4,7 +4,7 @@ env:
   node: true
   commonjs: true
   es6: true
-extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:flowtype/recommended']
+extends: ['eslint:recommended', 'plugin:react/recommended']
 parserOptions:
   ecmaFeatures:
     experimentalObjectRestSpread: true
@@ -13,7 +13,6 @@ parserOptions:
 plugins:
   - babel
   - react
-  - flowtype
 rules:
   color-hex-case:
     - upper

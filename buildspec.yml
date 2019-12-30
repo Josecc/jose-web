@@ -3,7 +3,10 @@ version: 0.2
 phases:
   build:
     commands:
-      - npm install && npm install -g webpack && webpack -p
+      - npm install
+      - npm install -g webpack@^3.4.1
+      - printenv > ".env"
+      - webpack -p
 
 artifacts:
   files:

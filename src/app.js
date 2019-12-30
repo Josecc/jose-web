@@ -17,7 +17,7 @@ require('./app.scss');
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
-ReactGA.initialize('<%= process.env.GOOGLE_ANALYTICS= %>');
+ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 store.dispatch(initialPosts());

@@ -10,7 +10,7 @@ export function getPosts(state = initialState, action = {}) {
         link: curr.link,
         author: curr.creator,
         id: curr.guid,
-        description: curr.content.split(/<p>|<\/p>/)[1],
+        description: curr.content.split(/>((?=.*[A-Z0-9])[\w(\-:),!"'\/$ ]+\.?)(?:<\/|[\.\w])*/)[1],
       });
       return acc;
     }, []);

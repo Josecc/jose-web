@@ -22,7 +22,7 @@ export default class Footer extends Component {
             <a dangerouslySetInnerHTML={instagram} href="https://www.instagram.com/jose_canahui/" rel="noopener" target="__blank" />
           </div>
           <div>
-            <span className="app-Footer-content-copy">2020 &copy; Jose Canahui</span>
+            <span className="app-Footer-content-copy">2020 - 2022 &copy; Jose Canahui</span>
           </div>
         </div>
       </div>

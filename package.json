@@ -41,6 +41,7 @@
     "svgo": "^0.7.2",
     "svgo-loader": "^1.2.1",
     "webpack": "^3.4.1",
+    "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^2.10.1"
   },
   "dependencies": {

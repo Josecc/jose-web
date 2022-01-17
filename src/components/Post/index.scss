@@ -10,15 +10,16 @@
   transition: all 0.15s ease-in-out;
 
   &:hover {
-    box-shadow: inset $shadow-center;
+    box-shadow: $shadow-center;
   }
 
   & > h2 {
     transition: all 0.15s ease-in-out;
     padding: 1em 0;
     margin: 0;
+    font-size: 20px;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;  
     overflow: hidden;
   }
@@ -51,7 +52,7 @@
     margin: auto 1em 1em;
     color: $gray;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
     overflow: hidden;
   }

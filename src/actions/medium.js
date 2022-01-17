@@ -1,5 +1,8 @@
 export function fetchPosts() {
-  return fetch(process.env.POST_API_LINK, { mode: 'no-cors' }).then(res => {return res.json();});
+  return fetch(process.env.POST_API_LINK, { mode: 'cors' }).then(res => {
+    console.log({ res })
+    return res.json();
+  });
 }
 
 export function setPosts(posts) {

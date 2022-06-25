@@ -1,7 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const Dotenv = require('dotenv-webpack');
 
 const extractSass = new ExtractTextPlugin({
@@ -21,8 +20,7 @@ module.exports = {
   entry: './app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/assets/'
+    path: path.resolve(__dirname, 'dist')
   },
   context: path.join(__dirname, 'src'),
   resolve: {
@@ -30,7 +28,6 @@ module.exports = {
     modules: ['src', 'node_modules'],
   },
   plugins: [
-    new CopyWebpackPlugin([ { from: 'src/assets/static', to: 'assets' } ]),
     new Dotenv({
       path: './.env',
       safe: true

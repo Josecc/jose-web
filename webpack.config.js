@@ -20,8 +20,7 @@ module.exports = {
   entry: './app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: "/assets/static/"
+    path: path.resolve(__dirname, 'dist')
   },
   context: path.join(__dirname, 'src'),
   resolve: {

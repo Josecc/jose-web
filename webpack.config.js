@@ -30,7 +30,7 @@ module.exports = {
     modules: ['src', 'node_modules'],
   },
   plugins: [
-    new CopyWebpackPlugin([ { from: 'src/assets/static', to: 'assets', patterns: '*.png' } ]),
+    new CopyWebpackPlugin({ patterns: [ { from: 'src/assets/static', to: 'assets'} ]}),
     new Dotenv({
       path: './.env',
       safe: true
